@@ -13,6 +13,10 @@ return {
           "bash",
           "markdown",
           "markdown_inline",
+          "c",
+          "cpp",
+          "python",
+          "fortran",
         },
         auto_install = false,
         highlight = {
