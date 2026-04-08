@@ -12,27 +12,6 @@ return {
         paths = { vim.fn.stdpath("config") .. "/snippets" },
       })
     end,
-    keys = {
-      {
-        "<C-k>",
-        function()
-          local ls = require("luasnip")
-          if ls.expandable() then
-            ls.expand()
-          elseif ls.jumpable(1) then
-            ls.jump(1)
-          end
-        end,
-        mode = { "i", "s" },
-      },
-      {
-        "<C-j>",
-        function()
-          require("luasnip").jump(-1)
-        end,
-        mode = { "i", "s" },
-      },
-    },
   },
 
   -- 2. luasnip-latex-snippets
@@ -41,14 +20,7 @@ return {
     ft = { "tex", "latex", "plaintex" },
     dependencies = { "L3MON4D3/LuaSnip", "lervag/vimtex" },
     config = function()
-      local m = require("luasnip-latex-snippets")
-      m.setup({ use_treesitter = true })
-      if vim.bo.filetype == "tex" then
-        local utils = require("luasnip-latex-snippets.util.utils")
-        local is_math = utils.with_opts(utils.is_math, true)
-        local not_math = utils.with_opts(utils.not_math, true)
-        m.setup_tex(is_math, not_math)
-      end
+      require("luasnip-latex-snippets").setup({ use_treesitter = true })
     end,
   },
 
@@ -64,17 +36,7 @@ return {
         preset = "default",
         ["<Tab>"] = { "select_next", "fallback" },
         ["<S-Tab>"] = { "select_prev", "fallback" },
-        ["<CR>"] = {
-          function(cmp)
-            local ls = require("luasnip")
-            if ls.expandable() then
-              vim.schedule(function() ls.expand() end)
-              return true
-            end
-          end,
-          "accept",
-          "fallback",
-        },
+        ["<CR>"] = { "accept", "fallback" },
       },
     },
   },

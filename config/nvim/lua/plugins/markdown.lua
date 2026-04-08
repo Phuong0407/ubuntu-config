@@ -1,4 +1,3 @@
--- lua/plugins/markdown.lua
 return {
   {
     "iamcco/markdown-preview.nvim",
@@ -13,16 +12,6 @@ return {
     },
   },
 
-  -- lua/plugins/markdown.lua
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        marksman = {},  -- LSP for markdown (links, headings navigation)
-      },
-    },
-  },
-
   {
     "stevearc/conform.nvim",
     opts = {
@@ -30,10 +19,6 @@ return {
         markdown = { "prettier" },
       },
     },
-  },
-
-  {
-    "OXY2DEV/markview.nvim",
   },
 
   {

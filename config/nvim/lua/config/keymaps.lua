@@ -31,20 +31,31 @@ for _, mode in ipairs(modes) do
 end
 
 -- Override Tab for LuaSnip jump (load after blink load)
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "tex", "latex" },
-  callback = function()
-    local opts = { buffer = true, silent = true }
-    vim.keymap.set({ "i", "s" }, "<C-k>", function()
-      local ls = require("luasnip")
-      if ls.expandable() then
-        ls.expand()
-      elseif ls.jumpable(1) then
-        ls.jump(1)
-      end
-    end, opts)
-    vim.keymap.set({ "i", "s" }, "<C-j>", function()
-      require("luasnip").jump(-1)
-    end, opts)
-  end,
+-- LuaSnip keymaps (GLOBAL, override LazyVim / LSP / blink)
+
+local function luasnip_next()
+  local ls = require("luasnip")
+  if ls.expand_or_jumpable() then
+    ls.expand_or_jump()
+  end
+end
+
+local function luasnip_prev()
+  local ls = require("luasnip")
+  if ls.jumpable(-1) then
+    ls.jump(-1)
+  end
+end
+
+-- Insert + Select mode
+vim.keymap.set({ "i", "s" }, "<C-j>", luasnip_next, {
+  silent = true,
+  noremap = true,
+  desc = "LuaSnip next",
+})
+
+vim.keymap.set({ "i", "s" }, "<C-k>", luasnip_prev, {
+  silent = true,
+  noremap = true,
+  desc = "LuaSnip prev",
 })

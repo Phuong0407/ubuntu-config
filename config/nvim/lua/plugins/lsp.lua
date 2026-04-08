@@ -6,12 +6,10 @@ return {
         clangd = {
           filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
         },
-
-	pyright = {},
-
+        pyright = {},
         asm_lsp = {
-	  filetypes = { "asm", "s", "S" },
-        }
+          filetypes = { "asm", "s", "S" },
+        },
       },
     },
   },

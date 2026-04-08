@@ -4,6 +4,9 @@
 
 vim.opt.clipboard = "unnamedplus"
 
+vim.opt.list = true
+vim.opt.listchars = { trail = "~" }
+
 vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.breakindent = true
