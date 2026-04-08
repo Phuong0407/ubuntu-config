@@ -1,0 +1,12 @@
+#%Module1.0
+proc ModulesHelp { } {
+    puts stderr "OpenFOAM v13 (Foundation version)"
+}
+module-whatis "OpenFOAM v13"
+conflict foam
+
+set root /opt/openfoam13
+prepend-path PATH            $root/bin
+prepend-path LD_LIBRARY_PATH $root/lib
+setenv FOAM_INST_DIR         /opt
+setenv WM_PROJECT_DIR        $root

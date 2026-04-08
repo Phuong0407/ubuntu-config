@@ -1,0 +1,15 @@
+#%Module1.0
+proc ModulesHelp { } {
+    puts stderr "NVIDIA CUDA Toolkit 11.8"
+}
+module-whatis "NVIDIA CUDA Toolkit 11.8"
+conflict cuda
+
+set root /usr/local/cuda-11.8
+prepend-path PATH $root/bin
+prepend-path LD_LIBRARY_PATH $root/lib64
+prepend-path LIBRARY_PATH $root/lib64
+prepend-path CPATH $root/include
+setenv CUDA_HOME $root
+setenv CUDA_ROOT $root
+setenv CUDA_PATH $root

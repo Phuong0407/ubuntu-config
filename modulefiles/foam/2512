@@ -1,0 +1,21 @@
+#%Module1.0
+proc ModulesHelp { } {
+    puts stderr "OpenFOAM v2512 (ESI version)"
+}
+module-whatis "OpenFOAM v2512"
+conflict foam
+
+set root     /usr/lib/openfoam/openfoam2512
+set platform linux64GccDPInt32Opt
+
+prepend-path PATH            $root/bin
+prepend-path PATH            $root/platforms/$platform/bin
+prepend-path LD_LIBRARY_PATH $root/platforms/$platform/lib
+prepend-path LD_LIBRARY_PATH $root/platforms/$platform/lib/dummy
+
+setenv FOAM_INST_DIR         /usr/lib/openfoam
+setenv WM_PROJECT_DIR        $root
+setenv WM_PROJECT            OpenFOAM
+setenv WM_PROJECT_VERSION    v2512
+setenv FOAM_APPBIN           $root/platforms/$platform/bin
+setenv FOAM_LIBBIN           $root/platforms/$platform/lib

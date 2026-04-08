@@ -1,0 +1,10 @@
+#%Module1.0
+proc ModulesHelp { } {
+    puts stderr "CASTEM2025"
+}
+module-whatis "CASTEM2025"
+conflict cast3m
+
+set root /home/grasvis/CASTEM2025
+prepend-path PATH $root/bin
+setenv CAST3M_HOME $root

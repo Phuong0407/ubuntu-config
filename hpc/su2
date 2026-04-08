@@ -1,0 +1,10 @@
+meson setup build            \
+  -Dwith-mpi=enabled         \
+  -Dwith-omp=true            \
+  -Denable-tecio=true        \
+  -Denable-cgns=true         \
+  -Denable-autodiff=true     \
+  -Denable-directdiff=true   \
+  -Denable-pywrapper=true    \
+  -Denable-openblas=true     \
+  --prefix=/home/grasvis/su2

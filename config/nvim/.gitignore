@@ -1,0 +1,5 @@
+# Lazy plugin cache
+.lazy.lua
+
+# Plugin installs
+lazy-lock.json

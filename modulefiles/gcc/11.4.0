@@ -1,0 +1,11 @@
+#%Module1.0
+proc ModulesHelp { } {
+    puts stderr "GNU Compiler Collection 11.4.0"
+}
+module-whatis "GNU Compiler Collection 11.4.0"
+conflict gcc
+
+setenv CC  /usr/bin/gcc-11
+setenv CXX /usr/bin/g++-11
+setenv FC  /usr/bin/gfortran-11
+prepend-path PATH /usr/bin
