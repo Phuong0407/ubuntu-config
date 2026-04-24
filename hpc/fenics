@@ -1,0 +1,1 @@
+spack spec fenics@2019.1.0.post0 build_system=cmake build_type=Release generator=make +hdf5 +mpi +openmp +parmetis +petsc +petsc4py +python +scotch +shared +slepc +slepc4py +suite-sparse +vtk +zlib
