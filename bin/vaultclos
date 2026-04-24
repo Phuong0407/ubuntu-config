@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+NAME="vault"
+MOUNTPOINT="/data/vault"
+
+if mountpoint -q "$MOUNTPOINT"; then
+    echo "Unmounting $MOUNTPOINT..."
+    sudo umount "$MOUNTPOINT"
+else
+    echo "$MOUNTPOINT is not mounted."
+fi
+
+if [ -e "/dev/mapper/$NAME" ]; then
+    echo "Closing LUKS mapper $NAME..."
+    sudo cryptsetup close "$NAME"
+else
+    echo "/dev/mapper/$NAME is already closed."
+fi
+
+echo "Vault is closed."

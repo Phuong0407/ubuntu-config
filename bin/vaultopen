@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DEVICE="/dev/sda4"
+NAME="vault"
+MOUNTPOINT="/data/vault"
+
+if [ ! -b "$DEVICE" ]; then
+    echo "Device $DEVICE does not exist."
+    exit 1
+fi
+
+if [ ! -d "$MOUNTPOINT" ]; then
+    echo "Mount point $MOUNTPOINT does not exist. Creating it..."
+    sudo mkdir -p "$MOUNTPOINT"
+fi
+
+if [ ! -e "/dev/mapper/$NAME" ]; then
+    echo "Opening LUKS device $DEVICE as $NAME..."
+    sudo cryptsetup open "$DEVICE" "$NAME"
+else
+    echo "Mapper /dev/mapper/$NAME already exists."
+fi
+
+if mountpoint -q "$MOUNTPOINT"; then
+    echo "$MOUNTPOINT is already mounted."
+else
+    echo "Mounting /dev/mapper/$NAME on $MOUNTPOINT..."
+    sudo mount "/dev/mapper/$NAME" "$MOUNTPOINT"
+fi
+
+echo "Vault is ready at $MOUNTPOINT"
