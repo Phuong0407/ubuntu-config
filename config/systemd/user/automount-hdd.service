@@ -1,0 +1,10 @@
+[Unit]
+Description=Auto-mount external HDD
+After=default.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/udisksctl mount -b /dev/disk/by-uuid/01DB71B6EF18FB60
+
+[Install]
+WantedBy=default.target

@@ -1,15 +1,51 @@
 return {
+  -- 0. mini.pairs: add $ pairing for LaTeX math mode
+  {
+    "nvim-mini/mini.pairs",
+    opts = {
+      mappings = {
+        ["$"] = {
+          action = "closeopen",
+          pair = "$$",
+          neigh_pattern = "[^\\].",
+          register = { cr = false },
+        },
+      },
+    },
+  },
+
+
   -- 1. LuaSnip
   {
     "L3MON4D3/LuaSnip",
     build = "make install_jsregexp",
+
+    dependencies = {
+      "rafamadriz/friendly-snippets",
+    },
+
     config = function()
-      require("luasnip").config.set_config({
+      local ls = require("luasnip")
+
+      ls.config.set_config({
         enable_autosnippets = true,
         store_selection_keys = "<Tab>",
       })
-      require("luasnip.loaders.from_lua").load({
-        paths = { vim.fn.stdpath("config") .. "/snippets" },
+
+      ls.filetype_extend("hpp", { "cpp" })
+      ls.filetype_extend("hh",  { "cpp" })
+      ls.filetype_extend("hxx", { "cpp" })
+      ls.filetype_extend("h",   { "c", "cpp" })
+
+      require("luasnip.loaders.from_vscode").lazy_load()
+
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "tex", "latex", "plaintex" },
+        callback = function()
+          vim.schedule(function()
+            dofile(vim.fn.stdpath("config") .. "/snippets/tex.lua")
+          end)
+        end,
       })
     end,
   },

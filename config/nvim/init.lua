@@ -1,2 +1,10 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
+vim.filetype.add({
+  extension = {
+    h = "cpp",
+    hpp = "cpp",
+    tpp = "cpp",
+    ipp = "cpp",
+  },
+})
+
 require("config.lazy")

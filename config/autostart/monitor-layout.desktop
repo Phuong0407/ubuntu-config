@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Monitor Layout
+Exec=bash -c "sleep 3; xrandr --output HDMI-A-0 --left-of eDP --mode 1920x1080 --rate 100 2>/dev/null || true"
+Hidden=false
+X-GNOME-Autostart-enabled=true

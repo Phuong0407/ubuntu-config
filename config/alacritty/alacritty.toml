@@ -45,3 +45,8 @@ style  = "Italic"
 [terminal.shell]
 program = "/usr/bin/zsh"
 args = ["-l"]
+
+[keyboard]
+bindings = [
+  { key = "F11", action = "ToggleFullscreen" },
+]

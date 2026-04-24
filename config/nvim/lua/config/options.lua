@@ -6,6 +6,7 @@ vim.opt.clipboard = "unnamedplus"
 
 vim.opt.list = true
 vim.opt.listchars = { trail = "~" }
+vim.opt.guifont = "JetBrainsMono Nerd Font:h12"
 
 vim.opt.wrap = true
 vim.opt.linebreak = true
@@ -24,4 +25,4 @@ vim.g.lazyvim_check_order = false
 
 -- kdiff3
 vim.opt.diffopt:append("vertical")
-vim.g.gitgutter_git_args = '--no-pager'
+vim.g.gitgutter_git_args = "--no-pager"

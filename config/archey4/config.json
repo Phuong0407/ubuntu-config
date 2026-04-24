@@ -1,0 +1,46 @@
+{
+  "entries": [
+    {
+      "type": "User"
+    },
+    {
+      "type": "Hostname"
+    },
+    {
+      "type": "Model"
+    },
+    {
+      "type": "Distro"
+    },
+    {
+      "type": "Kernel",
+      "check_version": false
+    },
+    {
+      "type": "Uptime"
+    },
+    {
+      "type": "Packages",
+      "combine_total": false,
+      "one_line": true,
+      "show_zeros": false
+    },
+    {
+      "type": "Shell"
+    },
+    {
+      "type": "Terminal",
+      "use_unicode": true
+    },
+    {
+      "type": "CPU",
+      "one_line": false,
+      "show_cores": true
+    },
+    {
+      "type": "RAM",
+      "warning_use_percent": 33.3,
+      "danger_use_percent": 66.7
+    }
+  ]
+}

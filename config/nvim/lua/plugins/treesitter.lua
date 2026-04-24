@@ -19,6 +19,8 @@ return {
         "cpp",
         "python",
         "fortran",
+        "cmake",
+        "make",
       },
     },
     config = function(_, opts)
