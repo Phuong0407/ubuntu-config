@@ -7,8 +7,9 @@ export stem=/data/ubdat/01_stem/
 export hass=/data/ubdat/02_hass/
 export proj=/data/ubdat/04_proj/
 export prog=/data/ubdat/06_prog/
-export lect=/data/ubdat/05_wrwk/01_lect/
+export lect=/data/ubdat/05_wrwk/02_lect/
 export soft=/data/ubdat/07_soft/
+export down=/data/ubdat/97_down/
 
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
@@ -24,11 +25,39 @@ esac
 
 export PATH="$HOME/.local/bin:$PATH"
 
-loadnvhpc() {
+nvhpc() {
   module use /opt/nvidia/hpc_sdk/modulefiles
   module load nvhpc/23.7
 }
 
-uloadnvhpc() {
+unvhpc() {
   module unload nvhpc/23.7
+}
+
+if [ -d /usr/local/go/bin ]; then
+  case ":$PATH:" in
+  *":/usr/local/go/bin:"*) ;;
+  *) export PATH="$PATH:/usr/local/go/bin" ;;
+  esac
+fi
+
+torb() {
+  (
+    cd /data/ubdat/98_torb || exit 1
+    ./start-tor-browser.desktop "$@" >/dev/null 2>&1 &
+  )
+}
+
+export PATH="/opt/adr-tools-3.0.0/src:$PATH"
+
+# OpenAI Codex in conservative local mode:
+# - read-only sandbox
+# - untrusted approval policy
+# - web search disabled
+codex-safe() {
+  codex \
+    --sandbox read-only \
+    --ask-for-approval untrusted \
+    --config web_search='"disabled"' \
+    "$@"
 }
