@@ -10,6 +10,7 @@ export prog=/data/ubdat/06_prog/
 export lect=/data/ubdat/05_wrwk/02_lect/
 export soft=/data/ubdat/07_soft/
 export down=/data/ubdat/97_down/
+export shot=/home/grasvis/Pictures/Screenshots/
 
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
