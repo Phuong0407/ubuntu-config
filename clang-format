@@ -1,0 +1,48 @@
+AccessModifierOffset: -2
+AlignAfterOpenBracket: Align
+AlignArrayOfStructures: Right
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignConsecutiveMacros: Consecutive
+AlignEscapedNewlines: DontAlign
+AlignOperands: AlignAfterOperator
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 0
+AllowAllArgumentsOnNextLine: true
+AllowAllConstructorInitializersOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortEnumsOnASingleLine: false
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseExpressionOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: inline
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortLambdasOnASingleLine: All
+AllowShortLoopsOnASingleLine: true
+AllowShortNamespacesOnASingleLine: true
+AllowShortRecordOnASingleLine: false
+AttributeMacros:
+
+
+BinPackLongBracedList: true
+BraceWrapping:
+  AfterCaseLabel:  false
+  AfterClass:      false
+  AfterControlStatement: Never
+  AfterEnum:       false
+  AfterFunction:   false
+  AfterNamespace:  true
+  AfterObjCDeclaration: false
+  AfterStruct:     false
+  AfterUnion:      false
+  AfterExternBlock: true
+  BeforeCatch:     false
+  BeforeElse:      false
+  BeforeLambdaBody: false
+  BeforeWhile:     false
+  IndentBraces:    false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false

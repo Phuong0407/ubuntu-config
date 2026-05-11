@@ -22,3 +22,5 @@ setenv FOAM_LIBBIN           $root/platforms/$platform/lib
 setenv FOAM_ETC              /usr/lib/openfoam/openfoam2512/etc
 setenv FOAM_TUTORIALS        /usr/lib/openfoam/openfoam2512/tutorials
 setenv FOAM_RUN              /data/ubdat/99_temp
+
+source-sh bash $root/etc/bashrc

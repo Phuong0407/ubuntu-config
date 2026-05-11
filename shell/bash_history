@@ -1,0 +1,2006 @@
+cd 01*
+ls
+xdg-open antuoni*
+xdg-open antoni*
+clear
+journalctl -b -p err --no-pager | tail -50
+journalctl -b -1 | grep -iE "fail|error|hook|gnome-session" | tail -40
+clear
+cd ~
+clear
+sudo systemctl stop NetworkManager-dispatcher.service
+sudo systemctl reset-failed NetworkManager-dispatcher.service
+sudo systemctl restart NetworkManager-dispatcher.service
+sudo systemctl restart gdm
+pactl info | grep "Server Name"
+pactl list short sinks
+alsamixer
+cleawr
+clear
+pactl list sinks | grep -A 20 "alsa_output"
+lear
+clear
+pactl list sinks | grep -A 2 "Ports:"
+sudo apt update
+sudo apt upgrade
+nvidia-smi
+pactl set-sink-port alsa_output.pci-0000_05_00.6.analog-stereo analog-output-headphones
+pulseaudio -k && pulseaudio --start
+sudo alsa force-reload
+sudo reboot
+clear
+journalctl -b -1 -p err
+clear
+journalctl -b -1 -p err
+clear
+mv ~/.config/gnome-session ~/.config/gnome-session.backup
+mv ~/.local/share/gnome-shell ~/.local/share/gnome-shell.backup
+systemctl --user daemon-reload
+systemctl --user reset-failed
+ls /.config/pulse
+ls /.pulse
+ls /.pulse*
+clear
+ls .pulse*
+ls .config/pulse
+rm -rf ~/.config/pulse
+rm -rf ~/.pulse*
+sudo reboot
+./at*
+./st*
+ls
+clear
+pwd
+ln -s /data/ubdat/97_down ~
+clear
+ln -s /data/ubdat/97_down ~/Downloads/
+clear
+cd ~
+clear
+sudo snap remove firefox
+sudo apt-get install --reinstall firefox
+sudo apt purge firefox
+sudo snap remove firefox
+ps aux | grep "snap install"
+clear
+ps aux | grep "snap install"
+sudo kill -9 16196
+sudo bash -c 'cat > /etc/apt/preferences.d/firefox-no-snap << EOF
+Package: firefox*
+Pin: release o=Ubuntu*
+Pin-Priority: -1
+EOF'
+sudo apt update && sudo apt install software-properties-common -y
+clear
+sudo add-apt-repository ppa:mozillateam/ppa
+sudo apt update
+sudo apt install firefox
+clear
+sudo add-apt-repository ppa:mozillateam/ppa
+clear
+sudo bash -c 'cat > /etc/apt/preferences.d/mozilla-firefox << EOF
+Package: *
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001
+EOF'
+sudo apt update
+apt-cache policy firefox
+which firefox
+firefox --version
+clear
+sudo apt upgrade
+clear
+sudo apt upgrade
+clear
+find ~/.local/share/applications/ /usr/share/applications/ /var/lib/snapd/desktop/applications/ -name "*firefox*.desktop" 2>/dev/null
+sudo rm /var/lib/snapd/desktop/applications/firefox_firefox.desktop
+update-desktop-database ~/.local/share/applications/
+sudo update-desktop-database /usr/share/applications/
+rm -rf ~/.cache/icon-theme.emerge
+rm -rf ~/.cache/thumbnails/*
+ls -la /var/lib/snapd/desktop/applications/firefox_firefox.desktop
+update-desktop-database ~/.local/share/applications/
+sudo update-desktop-database /usr/share/applications/
+busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s 'Meta.restart("Restarting…")'
+snap list | grep firefox
+sudo snap remove --purge firefox
+snap list
+sudo rm -f /var/lib/snapd/desktop/applications/firefox*.desktop
+sudo update-desktop-database /usr/share/applications/
+rm -rf ~/.cache/icon-theme.emerge
+sudo logout
+gnom-session-quit
+gnome-session-quit
+sudo apt remove --purge firefox
+sudo apt autoremove
+sudo apt install firefox
+clear
+vaultopen
+cat ~/.mozilla/firefox/profiles.ini
+ls
+ls -a
+ls -la ~/.mozilla/firefox/
+cat ~/.mozilla/firefox/profiles.ini
+mkdir -p ~/.mozilla
+cp -a ~/.mozilla-firefox-backup/firefox ~/.mozilla/
+ls ~/.mozilla/firefox/
+clear
+ls ~/.mozilla-firefox-backup/firefox/
+ls ~/.mozilla/firefox/hnz333zi.default/
+cat ~/.mozilla/firefox/profiles.ini
+# 1. Đóng Firefox
+killall firefox
+# 2. Edit profiles.ini
+nano ~/.mozilla/firefox/profiles.ini
+clear
+firefox
+vaultclos
+sudo apt update
+sudo apt pu
+sudo apt upgrade
+cd $sof
+cd $soft
+clea
+rlsclear
+clear
+ls
+ls trilinos
+git clone https://github.com/trilinos/Trilinos.git
+sudo apt update
+cd $soft
+clear
+ls
+git clone https://github.com/CGAL/cgal.git
+clear
+git clone https://github.com/cfwen/mumps.git
+git clone https://github.com/OpenMathLib/OpenBLAS.git
+clear
+ls
+cd $proj
+cd $soft
+clear
+git clone https://github.com/OpenMathLib/OpenBLAS.git
+clear
+cl;ear
+clear
+sudo apt upgrade
+cd $stem
+ls
+cd 05_soft
+ls
+cd 02_lang
+ls
+cd 01_ccpp
+clear
+ls
+xdg-open josuttis_cpp20_complete_guide.pdf
+which gcc
+which gfortran
+ls -a
+clear
+ls
+clear
+cp -r /home/grasvis/Zotero .
+ls
+ls
+cd Zotero
+clear
+ls
+pwd
+clear
+curl http://127.0.0.1:23119/better-bibtex/cayw?format=json
+clear
+curl http://127.0.0.1:23119/better-bibtex/cayw?format=json
+clear
+cd /data/ubdat
+ls
+cd *wrwk
+clear
+ls
+cd 00*
+ls
+clear
+ls -l
+sudo apt update
+sudo apt upgrade
+clear
+which nvicc
+which nvcc
+module load cuda/12.2
+which nvcc
+ls /usr/local/cuda-11.8/bin/nvcc
+clear
+nvcc --version
+clear
+module unload cuda/12.2
+clear
+curl https://developer.download.nvidia.com/hpc-sdk/ubuntu/DEB-GPG-KEY-NVIDIA-HPC-SDK | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-hpcsdk-archive-keyring.gpg
+sudo apt update
+clear
+curl https://developer.download.nvidia.com/hpc-sdk/ubuntu/DEB-GPG-KEY-NVIDIA-HPC-SDK | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-hpcsdk-archive-keyring.gpg
+clear
+echo 'deb [signed-by=/usr/share/keyrings/nvidia-hpcsdk-archive-keyring.gpg] https://developer.download.nvidia.com/hpc-sdk/ubuntu/amd64 /' | sudo tee /etc/apt/sources.list.d/nvhpc.list
+sudo apt-get update -y
+sudo apt-get install -y nvhpc-23-7
+sudo rm /etc/apt/sources.list.d/nvhpc.list
+sudo apt-get update
+sudo apt-get remove --purge 'nvhpc-*'
+sudo apt autoremove --purge
+sudo apt clean
+dpkg -l | grep nvhpc
+apt policy nvhpc-23-7
+clear
+curl https://developer.download.nvidia.com/hpc-sdk/ubuntu/DEB-GPG-KEY-NVIDIA-HPC-SDK | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-hpcsdk-archive-keyring.gpg
+echo 'deb [signed-by=/usr/share/keyrings/nvidia-hpcsdk-archive-keyring.gpg] https://developer.download.nvidia.com/hpc-sdk/ubuntu/amd64 /' | sudo tee /etc/apt/sources.list.d/nvhpc.list
+sudo apt-get update -y
+sudo apt-get install -y nvhpc-23-7-cuda-multi
+which nvfortran
+nvc++ --version
+export NVHPC=/opt/nvidia/hpc_sdk
+export PATH=$NVHPC/Linux_x86_64/23.7/compilers/bin:$PATH
+export MANPATH=$NVHPC/Linux_x86_64/23.7/compilers/man:$MANPATH
+nvc++ --version
+nvfortran --version
+clear
+ls /opt/nvidia/hpc_sdk/modulefiles
+clear
+module use /opt/nvidia/hpc_sdk/modulefiles
+module avail nvhpc
+module load nvhpc/23.7
+clear
+which nvc nvc++ nvfortran
+nvc --version
+nvc++ --version
+nvfortran --version
+which nvcc
+nvcc --version
+cd ubuntu/shell
+ls
+nvim common*
+source ~/.bashrc
+clear
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+clear
+cd $soft
+clear
+git  clone https://github.com/dartsim/dart.git
+./st*
+tree
+clear
+sudo apt upgrade
+sudo apt update
+cd ubuntu/config/tmux
+ls
+nvim tmux.conf
+clear
+nvim tmux.conf
+clear
+tmux -ls
+tmux -l
+clear
+ls
+cd ~
+ls
+clear
+cd .tmux
+ls -a
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+clear
+grep -R "vim-tmux-navigator\|TmuxNavigate\|select-pane -R\|bind-key.*C-l\|bind.*C-l"   ~/.tmux.conf ~/.tmux ~/.config/tmux ~/.tmux/plugins 2>/dev/null
+clear
+grep -R "vim-tmux-navigator\|TmuxNavigate\|select-pane -R\|bind-key.*C-l\|bind.*C-l"   ~/.tmux.conf ~/.tmux ~/.config/tmux ~/.tmux/plugins 2>/dev/null
+sudo reboot
+archey
+clear
+archey
+clear
+exit
+ls
+cd dart
+clear
+l
+clear
+ls
+cat REAME.md
+cat README.md
+source ~/.bashrc
+ls -a
+rm .zsh_history
+ls
+ls -a
+cd .zsh
+ls
+pwd
+clear
+cd ubuntu
+cd ..
+clear
+cd ubuntu
+clear
+ls
+cd shell
+ls
+touch zsh_history
+clear
+ls
+pwd
+clear
+ln -s /home/grasvis/ubuntu/shell ~/.zsh_history
+clear
+ls
+nano zsh.sh
+cd ..
+clear
+ls
+cd shell
+clear
+ls
+nvim zsh.sh
+cat zsh_*
+ls
+cd ..
+ls
+cd shell
+clear
+ls
+nvim zshrc
+pwd
+clear
+ln -s /home/grasvis/ubuntu/shell/zshrc ~/.zshrc
+clear
+nvim bashrc
+pwd
+ln -s /home/grasvis/ubuntu/shell/bashrc ~/.bashrc
+source ~/.bashrc
+clear
+readlink -f .zsh_history
+ls
+ln -s /home/grasvis/ubuntu/shell/zsh_history ~/.zshrc_history
+mv ~/.bash_history ~/.bash_history.bak; ln -s /home/grasvis/ubuntu/shell/bash_history ~/.bash_history
+clear
+history
+clear
+nvim bashrc
+source ~/.bashrc
+clear
+cd $prof
+cd $proj
+cd ~/ubuntu/shell
+clear
+ls
+clear
+nvim zshrc
+sudo apt update
+sudo apt upgrade
+# Xem kernel hiện tại build bằng gì
+cat /proc/version
+clear
+# Xem kernel hiện tại build bằng gì
+cat /proc/version
+which gcc
+gcc --version
+clear
+cd $soft
+git clone https://github.com/llvm/llvm-project.git
+git clone 
+git clone https://github.com/gcc-mirror/gcc.git
+source ~/.bashrc
+sudo apt upgrade
+clear
+sudo dpkg -i MeshLab2025.07-linux_x86_64.AppImage
+sudo apt update
+sudo apt install meshlab
+./st*
+cd $ubdat
+clear
+ls
+cd /data/ubdat
+ls
+cd 04
+cd 04*
+ls
+cd cfd
+cd ..
+cd cobra
+;s
+ls
+cd ..
+ls
+cd bobx
+clear
+;s
+ls
+mv AERO 03_data
+;s
+ls
+cd 03*
+clear
+ls
+rm Aerodynamics_of_bobsleighs_Maxime_Roux.pdf
+clear
+ls
+cd scan*
+clear
+ls
+cd scan*
+cd scan_tr*
+;s
+clear
+ls
+pwd
+nautilus .
+cd $soft
+git  clone https://github.com/RobotLocomotion/xfoil.git
+clear
+cd xfoil
+ls
+cd src
+ls
+cat aread.f
+sudo reboot
+module load foam/2512
+clear
+echo $FOAM_TUTORIALS
+ls $FOAM_TUTORIALS
+which pisoFoam
+echo $WM_PROJECT_DIR
+echo $FOAM_ETC
+echo $FOAM_TUTORIALS
+module show foam
+sudo /usr/local/modulefiles/foam/2512
+cd /data/ubdat
+ls
+clear
+ls
+mkdir 99_temp
+clear
+ls
+sudo nano /usr/local/modulefiles/foam/2512
+ls /usr/local/modulefiles/foam/
+sudo nano /usr/local/modulefiles/foam/13
+clear
+module unload foam
+clear
+module load foam/2512
+clear
+echo $FOAM_TUTORIALS
+c;ear
+clear
+module unload foam
+which pisoFOAM
+clear
+sudo nano /usr/local/modulefiles/foam/13
+clear
+module load foam/13
+cat /usr/local/modulefiles/foam/13
+echo $FOAM_RUN
+clear
+./st*
+sudo apt-get update && apt-get -y install openjdk-17-jdk 
+sudo apt-get update && sudo apt-get -y install openjdk-17-jdk 
+curl -fsSL https://install.julialang.org | sh
+. /home/grasvis/.bashrc
+ls
+ls go
+ls go*
+ls /usr/local/go
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.26.2.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.26.2.linux-amd64.tar.gz
+source ~/.bashrc
+which go
+cd ubuntu
+cd ~/ubuntu
+clear
+ls
+cd config
+cd nvim
+ls
+cd lua/plugins
+ls
+clear
+nvim neorg.lua
+sudo dkpg -i Zettlr*
+sudo dpkg -i Zettlr*
+pwd
+cd ubuntu/shell
+cd ~/ubuntu/shell
+clear
+ls
+pwd
+nvim common.sh
+source ~/.bashrc
+torb
+nvim common.sh
+source ~/.bashrc
+torb
+nvim common.sh
+source ~/.bashrc
+torb
+clear
+ls
+cd $lect
+cd ..
+ls
+rm -rf 00_zett
+clear
+ls
+rm -rf Obsidian-Zettelkasten-Starter-Kit
+clear
+ls
+cd $proj
+clear
+ls
+mv MAK OMAK
+ls
+clear
+ls
+cd math
+ls
+clear
+ls
+rm -rf math
+ls
+clear
+ls
+cd ..
+ls
+rm -rf math
+ls
+ls 01*
+ls
+clear
+ls
+clear
+cd $proj
+ls
+ls -a
+nvim .synignore
+sudo apt update
+sudo apt install borgbackup
+clear
+gmsh .
+mkdir bobx
+clear
+ls
+history
+sudo apt-get install openscad
+sudosudo apt remove freecad
+sudo apt remove freecad
+freecad
+clear
+which freecad
+snap list | grep -i freecad
+flatpak list | grep -i freecad
+apt list --installed | grep -i freecad
+apt rdepends libvtk9.1
+apt rdepends libhdf5-openmpi-103-1
+apt rdepends calculix-ccx
+sudo apt purge freecad-python3 freecad-common libfreecad-python3-0.19
+sudo apt autoremove --purge
+clear
+sudo apt-get install openscad
+pip install trimesh
+source ~/.bashrc
+clear
+date
+uptime
+who
+journalctl -k -b -O -n 200 --no-pager
+journalctl -k -b -0 -n 200 --no-pager
+clear
+journalctl -k -b -0 err..alert --no-pager
+free -h
+swapon -show
+nvidia-smi
+clear
+dmesg | grep -Ei "nvidia|nvrm
+|xid|gpu"
+sudo dmesg | grep -Ei "nvidia|nvrm|xid|gpu"
+sudo systemctl restart gdm3
+clear
+df -h
+clear
+journalctl -b -0 -p err..alert --no-pager
+df -h
+df -ih
+modinfo nvidia | grep ^version
+clear
+lspci -nnk | grep -A3 -Ei "vga|3d|display"
+glxinfo -B
+sudo apt install mesa-utils
+glxinfo -B
+clear
+sudo dmesg | grep -Ei "amdgpu|radeon|drm|gpu|firmware" | tail -n 120
+sudo reboot
+cd ubuntu
+cd config/nvim
+ls
+cd lua
+ls
+cd config
+s
+ls
+nvim keymaps.lua
+clear
+nvim keymaps.lua
+./Allrun
+clear
+module load foam/2512
+./Allrun
+gunzip -c motorBike.obj.gz > motorBike.obj
+gmsh .
+meshLab mo*obj
+meshlab mo*obj
+clear
+surfaceConvert motorBike.obj motorBike.stl
+meshlab motorBike.stl
+which foam
+module load foam/2512
+clear
+surfaceConvert motorBike.obj motorBike.stl
+meshlab motorBike.stl
+cd ..
+ls
+cd system
+ls
+ls ..
+clear
+ls
+cd ..
+ls 
+which openFoam
+which pisoFoam
+clear
+ls
+cd constant
+ls
+cd ..
+paraFoam
+./AllClean
+./Allclean
+./Allrun
+ls
+cd $FOAM_TUTORIALS
+ls
+module load foam/2512
+clear
+ls
+./Allrun
+./Allclean
+clear
+ls
+./Allrun
+./Allclean
+cd ./mo*
+ls
+./Allrun
+cd ..
+./Allrun
+clear
+cd /data/ubdat/04_proj/bobx/motorBike/motorBike
+find processor0 -maxdepth 1 -type d | sort -V | tail
+./Allclean
+module load foam/2512
+clear
+ls
+./Allclean
+clear
+ls
+cd motorBike
+ls
+./Allclean
+clear
+ls
+cd ..
+tree
+./Allrun
+cd /data/ubdat/04_proj/bobx/motorBike/motorBike
+tail -80 log.simpleFoam
+find processor0 -maxdepth 1 -type d -printf '%f\n' | sort -V | tail -20
+grep -n "endTime\|writeInterval\|writeControl" system/controlDict
+./Allclean
+clear
+./Allrun
+./Allclean
+cd ..
+clear
+ls
+./Allrun
+./Allclean
+./Allrun
+./Allclean
+cd ./motorBike
+ls
+./Allclean
+./Allrun
+cd ..
+./Allrun
+sudo timedatectl set-timezone Europe/Paris
+sudo locale-gen en_US.UTF-8
+sudo localectl set-locale LANG=en_US.UTF-8
+torb
+torb
+ls
+tar -xvzf ard*
+ls
+tar -xvzf adr*
+cd ~/opt
+cd /opt
+ls
+mkdir adr
+sudo mkdir adr
+clear
+ls
+cd adr
+ls
+cd adr*
+cd adr-tools-3.0.0
+;s
+ls
+clear
+ls
+git status
+clear
+pwd
+cp -r /data/ubdat/97_down/software/adr-tools-3.0.0/ .
+sudo cp -r /data/ubdat/97_down/software/adr-tools-3.0.0/ .
+ls
+cd ..
+ls
+mv adr/ .
+mv adr/adr-tools-3.0.0 .
+sudo mv adr/adr-tools-3.0.0 .
+ls
+rm -rf adr
+sudo rm -rf adr
+ls
+clear
+ls
+cd adr*
+ls
+ls ~/opt/adr-tools-3.0.0/src
+ls /opt/adr-tools-3.0.0/src
+nvim ~/.shell/common.sh
+source ~/.bashrc
+which adr
+adr help
+nvim ~/.shell/common.sh
+source ~/.bashrc
+which adr
+adr help
+hash -r
+clear
+export PATH="/opt/adr-tools-3.0.0/src:$PATH"
+hash -r
+which adr
+adr help
+nvim ubuntu/shell/common.sh
+nvim ~/ubuntu/shell/common.sh
+source ~/.bashrc
+which adr
+cd ubuntu
+clear
+ls
+nvim codex
+clear
+pwd
+ln -s /home/grasvis/ubuntu/codex ~/.codex
+clear
+ls ~/.codex
+mkdir -p ~/.codex
+cat > ~/.codex/config.toml <<'EOF'
+model = "gpt-5.5"
+
+# Safer default: no file writes by default.
+sandbox_mode = "read-only"
+
+# Safer than "never". "never" means no prompts, which is risky.
+approval_policy = "untrusted"
+
+# Disable web search unless explicitly needed.
+web_search = "disabled"
+
+# Keep credentials in file storage unless you later configure keyring.
+cli_auth_credentials_store = "file"
+EOF
+
+c;ear
+clear
+ls
+rm codex
+clear
+ls
+clear
+ls
+cat >> ~/.shell/common.sh <<'EOF'
+
+# OpenAI Codex in conservative local mode:
+# - read-only sandbox
+# - untrusted approval policy
+# - web search disabled
+codex-safe() {
+  codex \
+    --sandbox read-only \
+    --ask-for-approval untrusted \
+    --config web_search='"disabled"' \
+    "$@"
+}
+EOF
+
+source ~/.shell/common.sh
+clear
+cd $proj/bobx
+clear
+ls
+cd 05_foam
+ls
+cd 01_*
+ls
+cd system
+ls
+cat block*
+sudo reboot
+cd $bobx
+clear
+ls
+cd ubuntu/config/nvim
+ls
+cd lua
+ls
+cd config
+ls
+nvim filetypes.lua
+cd ..
+cd plugins
+ls
+mkdir foam.lua
+ls
+rm foam.lua
+rm -rf foam.lua
+clear
+ls
+nvim foam.lua
+clear
+nvim foam.lua
+rm -rf ~/.local/share/nvim/lazy/OpenFOAM-syntax
+rm -rf ~/.local/share/nvim/lazy/vim-foam
+nvim foam.lua
+rm -rf ~/.local/share/nvim/lazy/OpenFOAM-syntax
+rm -rf ~/.local/share/nvim/lazy/vim-foam
+clear
+cd ..
+cd config
+ls
+nvim
+module load foam/2512
+clear
+find $FOAM_TUTORIALS -type d -path "*pimpleFoam*LES*wallMountedHump*"
+cp -r /usr/lib/openfoam/openfoam2512/tutorials/incompressible/pimpleFoam/LES/wallMountedHump $proj/bobx
+clear
+ls
+cd $proj/bobx
+ls
+clear
+sudo apt-get install wget gpg && wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg && sudo install -D -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/microsoft.gpg && rm -f microsoft.gpg
+sudo nano /etc/apt/sources.list.d/vscode.sources
+clear
+sudo apt install apt-transport-https && sudo apt update && sudo apt install code # or code-insiders
+ls
+cd wall*
+clear
+tree
+lear
+clear
+tree 
+cd ..
+ls
+clear
+ls
+cd 05*
+ls
+cd 01*
+ls
+cd system
+ls
+cd ..
+cd 0
+ls
+ls
+nvim filetypes.lua
+archey
+clear
+nvim -R p
+cd ..
+ls
+cd system
+ls
+cd ..
+cd plugins
+ls
+nvim foam.lua
+nvim block*
+meshlab *ed.stl
+nvim block*
+clear
+nvim compute_bob_refs.py
+ls
+clear
+ls
+clear
+chmod +x compute_bob_refs.py
+./compute_bob_refs.py *ed.stl --scale 1
+cd ..
+clear
+archey
+nvidia-smi
+clear
+which module
+module avail
+module load cuda/12.2
+clear
+which gcc
+clear
+which nvc++
+module avail
+cd /opt
+ls
+cd nvidia
+ls
+cd hpc_sdk
+ls
+cd lear
+clear
+module use /opt/nvidia/hpc_sdk/modulefiles
+module avail nvhpc
+module load nvhpc
+which nvc++
+nvc++ --version
+cd ubuntu
+ls
+cd ~/ubuntu
+ls
+cd shell
+ls
+nvim common.sh
+source ~/.bashrc
+nvhpc
+module avail nvhpc
+module avail
+module load nvhpc-hpcx-cuda12/23.7
+clear
+module load nvhpc-nompi/23.7
+which nvc++
+nvc++ --version
+which nvc
+which nvc++
+which nvfortran
+echo $NVHPC
+echo $PATH | tr ':' '\n' | grep nvidia
+clear
+ls /opt/nvidia/hpc_sdk/Linux_x86_64/23.7/comm_libs
+export HPCX_HOME=/opt/nvidia/hpc_sdk/Linux_x86_64/23.7/comm_libs/hpcx
+source $HPCX_HOME/hpcx-init.sh
+hpcx_load
+which mpirun
+mpirun --version
+module load nvhpc-nompi/23.7
+export HPCX_HOME=/opt/nvidia/hpc_sdk/Linux_x86_64/23.7/comm_libs/hpcx
+source $HPCX_HOME/hpcx-init.sh
+hpcx_load
+clear
+module load nvhpc-nompi/23.7
+export HPCX_HOME=/opt/nvidia/hpc_sdk/Linux_x86_64/23.7/comm_libs/hpcx
+source $HPCX_HOME/hpcx-init.sh
+hpcx_load
+module avail
+nvhpc
+module avail
+cleart
+vi
+clear
+vim
+clear
+git --version
+cl
+raclear
+clear
+man grep
+clear
+code
+clear
+uname -r
+clewar
+clear
+archey
+clear
+arcchey
+archey
+clear
+archey
+clear
+nvtop
+clear
+fzf cuda
+fzf ip
+fzf 
+clear
+clera
+clear
+archey
+clear
+sudo apt install binutils gdb strace ltrace
+which objdump nm strings gdb strace
+clear
+archey
+sudo apt remove zettlr
+clear
+archey
+cd ubuntu/config/nvim/lua/config
+ls
+nvim key*
+sudo apt update
+sudo apt 
+sudo apt-mark hold grub-customizer
+clear
+sudo apt update
+sudo apt upgrade
+clear
+sudo apt install homebank
+sudo apt update
+sudo apt upgrade
+clear
+archey
+clear
+sudo apt install tesseract-ocr ocrmypdf
+clear
+torb
+sudo apt update
+sudo apt upgrade
+clear
+apt-mark showhold
+sudo apt-mark unhold firefox
+sudo apt-mark unhold grub-customizer
+sudo apt-mark unhold linux-generic-hwe-22.04
+sudo apt update
+sudo apt upgrade
+clear
+sudo apt update
+sudo nano /etc/apt/sources.list.d/google-chrome.list
+dpkg --print-foreign-architectures
+dpkg -l | grep ':i386'
+clear
+dpkg -l | grep ':i386'
+sudo apt update
+cler
+clear
+which gcc
+which gcc-12
+which gfortran-12
+clear
+which ssh
+ssh -X thanh.diep@129.104.254.97 
+ssh -Y -C thanh.diep@129.104.254.97 
+clear
+sudo reboot
+cd ubuntu
+ls
+git status
+git add config/nvim/lua/plugins/nvim-tmux-navigator.lua
+git commit -m "add a navigator to navigate seamlessly between tmux and nvim"
+clear
+ls
+clear
+git status
+git add config/nvim/lua/plugins/neo-tree.lua
+git commit -m "add config for file explorer in nvim"
+clea
+clear
+ls
+clear
+git status
+git add config/tmux/tmux.conf
+git commit -m "add a navigator to navigate seamlessly between tmux and nvim"
+clear
+ls
+git status
+git add modulefiles/foam*
+git commit -m "add tutorial/project dir"
+clea
+clear
+git status
+cat shell/common.sh
+git add  shell/common.sh
+git commit -m "add cmd for nvidia hpc sdk, torbroweser and openai agent tool"
+clear
+git status
+ls
+nvim config/nvim/lazy*
+nvim config/nvim/lazyvim.json
+clear
+ls
+clear
+sudo apt update
+sudo apt upgrade
+clear
+sudo apt install blender
+ls
+gs -sDEVICE=pdfwrite    -dCompatibilityLevel=1.4    -dPDFSETTINGS=/ebook    -dNOPAUSE -dQUIET -dBATCH    -sOutputFile=output.pdf    'Essais soufflerie bob 3&4 juin 2024.pdf'
+tree > data.txt
+ls
+clear
+ls
+clear
+ssh -Y -C thanh.diep@129.104.254.97
+clear
+ssh -Y -C thanh.diep@129.104.254.97
+ssh -Y -C thanh.diep@129.104.254.97
+ssh -Y -C thanh.diep@129.104.254.97
+cd $soft
+ls
+cd /data/ubdat
+ls
+cd 09*
+clear
+ls
+cd m1
+ls
+cd 01*
+ls
+clear
+cd 0
+ls
+cd forces
+ls
+cd 0
+cd 0.4*
+ls
+cd 0.406cd ..
+clear
+cd ..
+cd ls
+ls
+cd 0.4*
+ls
+cat force.dat
+clear
+cat force.dat
+git init
+clear
+git status
+git init
+clear
+touch .gitignore
+clear
+ls
+nano .gitignore
+clear
+git status
+git add .gitignore
+clear
+git commit -m "add gitignore file"
+clear
+git push
+git remote add https://github.com/Phuong0407/bobsleights.git
+git remote origin add https://github.com/Phuong0407/bobsleights.git
+git remote add origin https://github.com/Phuong0407/bobsleights.git
+clear
+ls
+git status
+git add 01*
+git status
+nano .git*
+git add .gitignore
+clear
+git commit -m "add more file to .gitignore"
+git status
+clear
+git rm -r --cached 01_mono/constant/polyMesh
+git rm -r --cached 01_mono/constant/extendedFeatureEdgeMesh
+git rm -r --cached 01_mono/constant/triSurface/*.obj
+git rm -r --cached 01_mono/constant/triSurface/*.vtp
+git rm -r --cached 01_mono/*.obj
+clear
+git status
+git rm -r --cached .
+git add .
+clear
+git status
+ls -a
+rm -rf .git
+clear
+ls
+clear
+ls
+clear
+ls
+git status
+clear
+nano .gitignore
+clear
+tree
+claer
+clear
+ls
+nvim .gitignore
+gitinit
+git init
+git remote add origin https://github.com/Phuong0407/bobsleights.git
+clear
+git status
+nvim .gitignore
+git status
+clear
+git add -n .   # Dry run, shows what would be added
+clear
+nvim .gitignore
+clear
+git status
+git add .
+git status
+nvim .gitignore
+git rm --cached 01_mono/constant/triSurface/monobob.eMesh.gz
+clear
+ls
+git rm --cached .clang-format
+clear
+ls -a
+cd 01*
+ls
+ls -a
+clear
+cd ..
+clear
+git rm --cached 01*/.clang-format
+clear
+rm 01*/.clang-format
+clear
+ls
+git status
+git add .
+clear
+git status
+git add -m "first add file"
+git commit  -m "first add file"
+clear
+git push
+cd ~
+clear
+vault
+vaulto
+clear
+cd ubuntu/shell
+clear
+ls
+cat common.sh
+clear
+ls
+nvim bash.sh
+nvim bashrc
+clear
+julua --version
+julia --version
+clear
+cd ~
+clear
+l
+clear
+ls
+l
+clear
+ls -a
+history
+clear
+vaultopen
+cd /data/vault
+ls
+cd 01*
+clear
+ls
+cat -n 10 api.txt
+cat api.txt
+git pull
+git pull origin master --allow-unrelated-histories
+clear
+git status
+git push -u origin master
+git log --oneline --graph --all
+clear
+git log --oneline --graph --all
+git status                # Shows conflicted files
+cat api.txt
+git push -u origin master
+clear
+git log --oneline --graph --all -5
+git remote -v
+git push -u origin master
+git rebase origin/master
+clear
+git push -u origin master
+git log --oneline --graph --all -3
+git push origin master
+git config --global credential.helper store
+git push origin master
+clear
+git push origin master
+clear
+cd ..
+clear
+vaultclos
+clear
+cd ~/ubuntu
+ls
+cd shell
+clear
+ls
+nvim functions.sh
+clear
+ls
+nvim common.sh
+clear
+ls
+ssh -Y -C thanh@129.104.25.185
+ssh -Y -C thanh.diep@129.104.254.97
+archey
+ssh -Y -C thanh.diep@129.104.254.97
+cd $soft
+clear
+ls
+cd petsc
+clear
+ls
+clear
+cd ubuntu
+clear
+ls
+cd config
+clear
+ls
+clear
+ls
+cd nvim
+clear
+ls
+cd lua
+clear
+ls
+nvim --version
+clear
+ls
+cd plugins
+ls
+clear
+ls
+nvim treesitter.lua
+nvim
+clear
+ls
+sudo apt update
+sudo apt install xournalpp
+clear
+history
+tar -xzf cfMesh*.tar.gz
+ls
+ls cf*
+tar -xzf cfMesh*.tgz
+cd cfMesg
+cd cfMesh*2
+ls
+clear
+ls
+cat README
+module load foam/2512
+clear
+ls
+./Allwmake -j8
+./Allwmake -j
+which pisoFoam
+pisoFoam -help
+clear
+find /usr/lib/openfoam -name wmake
+source /usr/lib/openfoam/openfoam2512/etc/bashrc
+clear
+which wmake
+./Allwmake -j8
+foamVersion
+./Allwmake -j8
+clear
+module load foam/2512
+clear
+which wmake
+source /usr/lib/openfoam/openfoam2512/etc/bashrc
+which wmake
+ls
+./Allwclean
+./Allwmake
+./Allwclean
+vaultopen
+clear
+ls
+cd vault
+cd /data/
+ls
+cd vault
+ls
+clear
+cd 01*
+clear
+cat api*
+ssh -Y -C thanh.diep@129.104.254.97
+clear
+ssh -Y -C thanh.diep@129.104.254.97
+ssh -Y -C thanh.diep@129.104.254.98
+ssh -Y -C thanh.diep@129.104.253.32
+echo $SLURM_CPUS_ON_NODE
+scontrol show job $SLURM_JOB_ID
+clear
+cat /sys/fs/cgroup/cpuset.cpus
+ssh -Y -C thanh.diep@129.104.252.64
+archey
+ssh -Y -C thanh.diep@129.104.254.97
+cd /data/vault
+ls
+cd 01_cnfd
+clear
+cat ap*
+ssh -Y -C thanh.diep@129.104.252.64
+clear
+ssh -Y -C thanh.diep@129.104.252.64
+clear
+ssh -Y -C thanh.diep@129.104.252.64
+clear
+kaekfjaeifj
+clear
+nano ~/.bashrc
+clear
+source ~/.bashrc
+clear
+bash --version | head -1
+clear
+cal
+which cal
+ncal
+clear
+ssh -Y -C thanh.diep@129.104.252.64
+lear
+clear
+ssh -Y -C thanh.diep@129.104.254.100
+ssh -Y -C thanh.diep@129.104.252.64
+sudo apt install ncal
+clear
+ncal
+clear
+date
+clear
+df
+free
+clear
+ls -l
+clear
+ls -lt
+ls -l
+clear
+ls -help
+ls --help
+clear
+ls -d
+c;ear
+clear
+ls -d
+ls --directory
+clear
+ls -F
+clear
+ssh -Y -C thanh.diep@129.104.252.65
+clear
+ls -l
+less turb*
+clear
+ssh -Y -C thanh.diep@129.104.252.88
+ssh -Y -C thanh.diep@129.104.252.87 
+clear
+ssh -Y -C thanh.diep@129.104.252.87 
+ssh -Y -C thanh.diep@129.104.252.87
+clear
+ssh -Y -C thanh.diep@129.104.254.97
+ssh -Y -C thanh.diep@129.104.253.32
+ssh -Y -C thanh.diep@129.104.253.64
+clear
+ssh -Y -C thanh.diep@129.104.253.46
+ssh -Y -C thanh.diep@129.104.252.64
+ckear
+clear
+cd $soft
+clear
+ls
+cd petsc
+clear
+ls
+./configure --help
+archey
+clear
+archey
+clear
+ssh -Y -C thanh.diep@129.104.252.88
+ssh -Y -C thanh.diep@129.104.252.87
+ssh -Y -C thanh.diep@129.104.252.64
+ssh -Y -C thanh.diep@129.104.252.65
+clear
+archey
+tmux attach -eigen
+tmux attach -t eigen
+clear
+tmux attach -t eigen
+clear
+tmux attach -t bobx
+clear
+dmesg -T | less
+dmesg -T | grep -Ei "error|warn|fail|fault|oom|segfault|nvme|ext4|xfs|thermal|mce"
+clear
+sudo dmesg -T | grep -Ei "error|warn|fail|fault|oom|segfault|nvme|ext4|xfs|thermal|mce"
+clear
+sensors
+sudo apt install moreutils
+clearw
+clear
+python3 -c "import os; print(os.strerror(61))"
+grep ENODATA /usr/include/asm-generic/errno*
+cleawr
+clear
+for z in /sys/class/thermal/thermal_zone*; do     echo "$z: $(cat $z/type)"; done
+clear
+journalctl -k | grep iwlwifi
+clear
+tch -n1 "grep 'cpu MHz' /proc/cpuinfo | head"
+clear
+watch -n1 "grep 'cpu MHz' /proc/cpuinfo | head"
+watch -n1 sensors
+clear
+watch -n1 "grep 'cpu MHz' /proc/cpuinfo | head"
+clear
+history
+clear
+pwd
+source ~/.bashrc
+ssh -Y -C thanh.diep@129.104.252.65
+clear
+ssh -Y -C thanh.diep@129.104.252.65
+ssh -Y -C thanh.diep@129.104.252.64
+clear
+lsblk
+sudo mount /dev/sda3/ /data/share
+sudo mount /dev/sda3 /data/share
+clear
+sudo umount /data/share
+sudo apt update
+sudo apt upgrade
+clear
+sudo shutdown -h now
+clerq
+clear
+cd ubuntu/shell
+clear
+ls
+nano claude.sh
+nvim claude.sh
+clear
+source ~/.bashrc
+clear
+history
+ssh -Y -C thanh.diep@129.104.252.65
+clear
+cd /data/ubdat/09*
+clear
+ls
+cd m1
+clear
+ls
+history
+rsync -avz thanh.diep@129.104.252.65:/users/eleves-a/2023/thanh.diep/m1/01_mono .
+clear
+cd 01
+ls
+mv 01_mono 01_mono_pimple_explosion
+cd 01_mono_pimp*
+clear
+ls
+cp /data/ubdat/04_proj/bobx/05_foam/01_mono/log.pimpleFoam .
+clear
+ls
+claude
+clear
+which simpleFoam
+module load foam/2512
+clear
+pwd
+ls
+ssh -Y -C thanh.diep@129.104.252.65
+clear
+claude
+nano claude
+clear
+source ~/.bashrc
+sudo apt install texlive-pictures
+clear
+git status
+clear
+claude --resume 1dbfaf7f-1884-4f17-9530-9b26b9fa0cef
+cd $proj/bobx
+clear
+ls
+cd 05*
+clkear
+clear
+git pull
+claude --resume 1dbfaf7f-1884-4f17-9530-9b26b9fa0cef
+claude --resume
+clear
+nautilus .
+clear
+# Xem TOÀN BỘ errors/warnings, không chỉ 10 dòng cuối
+sudo dmesg -T --level=err,warn | tail -50
+# Hoặc nếu freeze VỪA XẢY RA:
+sudo dmesg -T | tail -200
+clear
+# GPU driver hiện tại
+lspci -k | grep -A 3 VGA
+# X server crashes (nếu có)
+grep -i "segfault\|error\|fail" /var/log/Xorg.0.log | tail -20
+# System journal quanh thời điểm freeze
+journalctl -b --since "14:00" --until "14:05" | grep -i "error\|fail\|freeze"
+sudo nano /etc/gdm3/custom.conf
+clear
+sudo nano /etc/default/grub
+clear
+sudo nano /etc/default/grub
+ssh -Y -C thanh.diep@129.104.252.65
+claude
+sudo update-grub
+sudo reboot
+history
+clear
+module load foam/2512
+clear
+cd $FOAM_TUTORIALS
+ls
+cd in*
+ls
+cd pimp*
+ls
+cd LES
+ls
+cd wall*
+clear
+ls
+cd set*
+kls
+ls
+cd SpalartAllmarasDDES-maxDeltaxyzCubeRoot
+ls
+clear
+ls
+cd constant
+ls
+cd turb*
+cat turb*
+maxDeltaxyzCubeRoot
+ssh -Y -C thanh.diep@129.104.252.65
+ssh -Y -C thanh.diep@129.104.252.64
+journalctl -xe --no-pager | tail -50
+ssh -Y -C thanh.diep@129.104.252.65
+sudo systemctl restart gdm
+journalctl -xe --no-pager | tail -50
+clear
+journalctl -xe --no-pager | tail -100
+clear
+cat /var/log/Xorg.0.log | grep -E "(EE|WW)" | tail -30
+journalctl -b 0 -u display-manager --no-pager | tail -50
+journalctl -b 0 -u display-manager --no-pager | tail -1000
+journalctl -b 0 | grep -iE "(wayland|xorg|gdm|sddm)" | tail -30
+journalctl -b 0 | grep -iE "(nvidia|nvrm)" | tail -30
+prime-select query
+clear
+journalctl -b 0 | grep -i "oom\|killed process" | tail -20
+ls -la /var/run/ | grep nvidia
+id gdm
+sudo usermod -aG nvidia-persistenced gdm
+clear
+id gdm
+sudo systemctl restart nvidia-persistenced
+ssh -Y -C thanh.diep@129.104.252.65
+sudo systemctl restart gdm
+clear
+sudo chvt 2
+clear
+journalctl -b 0 | grep -iE "(nvidia|permission denied)" | tail -20
+sudo systemctl restart gdm
+sudo reboot
+ls -la /var/run/nvidia-xdriver-* 2>/dev/null && echo "OK" || echo "MISSING"
+id gdm
+journalctl -b 0 | grep -iE "(permission denied|nvidia)" | tail -20
+clear
+free -h
+# Nếu available < 1GB thì OOM vẫn là risk
+sudo aa-status 2>/dev/null | grep -i nvidia
+ls -la /home/grasvis/.local/share/icc/
+ls -la /var/run/ | head -5
+stat /var/run/nvidia-xdriver-86256a7e 2>/dev/null || echo "does not exist"
+sudo -u gdm touch /var/run/test_gdm 2>&1 && sudo rm /var/run/test_gdm || echo "gdm cannot write to /var/run"
+clear
+# Xem nvidia có tmpfiles config không
+cat /usr/lib/tmpfiles.d/nvidia-persistenced.conf 2>/dev/null
+ls /usr/lib/tmpfiles.d/ | grep nvidia
+ls /etc/tmpfiles.d/ | grep nvidia
+# Xem nvidia-persistenced đang run như user nào
+ps aux | grep nvidia-persistenced
+# Check nếu có subdir riêng cho nvidia trong /var/run
+ls -la /var/run/ | grep nvidia
+sudo mkdir -p /var/run/nvidia-xdriver
+sudo chown gdm:gdm /var/run/nvidia-xdriver
+sudo chmod 755 /var/run/nvidia-xdriver
+clear
+sudo mkdir -p /etc/X11/xorg.conf.d/
+sudo tee /etc/X11/xorg.conf.d/10-nvidia-prime.conf << 'EOF'
+Section "ServerFlags"
+    Option "AutoAddGPU" "false"
+EndSection
+
+Section "Module"
+    Load "modesetting"
+EndSection
+
+Section "Device"
+    Identifier "nvidia"
+    Driver "nvidia"
+    BusID "PCI:1:0:0"
+    Option "AllowEmptyInitialConfiguration"
+    Option "SidebandSocketPath" "/var/run/nvidia-xdriver"
+EndSection
+EOF
+
+clear
+sudo tee /etc/tmpfiles.d/nvidia-xdriver.conf << 'EOF'
+d /var/run/nvidia-xdriver 0755 gdm gdm -
+EOF
+
+sudo systemd-tmpfiles --create /etc/tmpfiles.d/nvidia-xdriver.conf
+sudo systemctl restart gdm
+clear
+sudo reboot
+cat /etc/X11/xorg.conf.d/10-nvidia-prime.conf
+sudo rm /etc/X11/xorg.conf.d/10-nvidia-prime.conf
+clear
+sudo systemctl start gdm
+sudo tee /etc/tmpfiles.d/nvidia-xdriver.conf << 'EOF'
+sudo tee /etc/tmpfiles.d/nvidia-xdriver.conf << 'EOF' d /var/run/nvidia-xdriver 0755 gdm gdm -
+EOF
+
+clear
+# Tạo tmpfiles rule
+sudo tee /etc/tmpfiles.d/nvidia-xdriver.conf << 'EOF'
+d /var/run/nvidia-xdriver 0755 gdm gdm -
+EOF
+
+# Apply ngay
+sudo systemd-tmpfiles --create /etc/tmpfiles.d/nvidia-xdriver.conf
+# Verify
+ls -la /var/run/nvidia-xdriver
+clear
+ls -la /var/run/nvidia-xdriver
+sudo tee /etc/X11/xorg.conf.d/10-nvidia-sideband.conf << 'EOF'
+Section "Device"
+    Identifier "nvidia"
+    Driver "nvidia"
+    BusID "PCI:1:0:0"
+    Option "SidebandSocketPath" "/var/run/nvidia-xdriver"
+EndSection
+EOF
+
+reboot
+clear
+ls /etc/X11/xorg.conf.d/10-nvidia
+ls /etc/X11/xorg.conf.d/10-nvidia*
+sudo rm -f /etc/X11/xorg.conf.d/10-nvidia-sideband.conf
+sudo rm -f /etc/X11/xorg.conf.d/10-nvidia-prime.conf
+clear
+ls /etc/X11/xorg.conf.d/g
+ls /etc/X11/xorg.conf.d/
+clear
+sudo systemctl start gdm
+ls /etc/X11/xorg.conf.d/
+clear
+# Kiểm tra gdm group hiện tại
+id gdm
+# Thêm gdm vào group root (cho phép write /var/run)
+sudo usermod -aG root gdm
+# Restart gdm
+sudo systemctl restart gdm
+sudo prime-select amd
+sudo reboot
+nvidia-smi
+c;ear
+clear
+nvidia-smi
+python3 -c "import torch; print(torch.cuda.is_available())"
+cd $soft
+clear
+ls
+cd cuda-samples
+clear
+ls
+cd Samples
+ls
+cd 01_*
+cd 0*
+clear
+ls
+cd matrixMul
+ls
+mkdir build
+cd build
+clear
+cmake ..
+clear
+module avail
+module load gcc/12.3.0
+clear
+ls
+cd ..
+rm -rf build
+mkdir build
+cd build
+clear
+cmake ..
+clear
+cd ..
+clear
+rm -rf build; mkdir build; cd build
+clear
+ls
+module load cuda/12.2
+clear
+cmake ..
+ls
+make
+cd ..; rm -rf build; mkdir build; cd build
+clear
+cmake --help
+clear
+cd ..
+clear
+ls
+cat README.md
+ls
+cat CM*
+clear
+cd build
+cat ../CM*
+clear
+ls
+cd ..
+clear
+git tag
+git checkout v12.2
+clea
+clear
+cd S*
+cd Sa*
+cd Sam*
+ls
+cd Samples
+ls
+cd 0*
+clear
+ls
+cd matrixMul
+ls
+clear
+ls
+cd build
+ls
+cat ../CM*
+cat ../Make*
+clear
+cd ..
+clear
+make
+clear
+ls
+./matrixMul
+clear
+cd ~
+clear
+history
+clear
+journalctl -b 0 | grep -i "permission denied" | head -10
+journalctl -b 0 | grep -i "sideband" | head -10
+prime-select query
+sudo prime-select amd
+clear
+sudo prime-select amd
+ls -la /dev/fb0
+ls -la /dev/dri/
+groups gdm
+ssh -Y -C thanh.diep@129.104.252.65
+sudo usermod -aG video,render gdm
+sudo systemctl restart gdm
+sudo prime-select amd
+ls /etc/X11/xorg.conf.d/
+ls
+clear
+ls
+ls /etc/X11/xorg.conf.d/
+clear
+archey
+paravoew
+paraview
+module load openfoam/2512
+module load foam/2512
+clear
+blockMesh
+clear
+module list
+echo $WM_OPTIONS
+module show foam/2512
+ls /etc/modulefiles/foam/2512
+clear
+ls /usr/share/modules/modulefiles/foam/2512
+module show foam/2512 | head -1
+which module
+which modules
+clear
+module ls
+module --help
+clear
+module list
+module avail
+ls /usr/local/modulefiles
+sudo nano /usr/local/modulefiles/foam/2512
+clear
+module load foam/2512
+blockMesh
+paraFoam
+clear
+checkMesh
+touch merg.geo
+nano merg.geo
+gmsh merg.geo
+clear
+surfaceCheck constant/triSurface/body2.stl
+clear
+surfaceCheck constant/triSurface/ruotaant.stl
+clear
+surfaceCheck constant/triSurface/ruotapost.stl
+surfaceCheck constant/triSurface/ruotaant.stl
+surfaceCheck constant/triSurface/body2.stl
+clear
+module list
+clear
+ssh -Y -C thanh.diep@129.104.252.65
+clear
+gmsh merg.geo
+git status
+touch omega
+clear
+touch k
+clear
+git status
+git add .
+git commit -m "switch to kOmegaSST"
+git push
+history
+rsync -avz thanh.diep@129.104.252.65:/users/eleves-a/2023/thanh.diep/m1 .
+rsync -avz thanh.diep@129.104.252.65:/users/eleves-a/2023/thanh.diep/m1/ .
+clear
+rsync -avz thanh.diep@129.104.252.65:/users/eleves-a/2023/thanh.diep/m1.bak .
+ssh -Y -C thanh.diep@129.104.252.65
+rm 30p-complexity-overview.pptx
+clear
+ls
+clear
+cd ubuntu
+clear
+lg
+clear
+git status
